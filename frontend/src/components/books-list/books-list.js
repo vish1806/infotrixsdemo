@@ -189,7 +189,7 @@ export const BooksList = () => {
       {user && !isAdmin && (
         <>
           <div className={`${classes.pageHeader} ${classes.mb2}`}>
-            <Typography variant="h5">Borrowed Books</Typography>
+          <Typography variant="h5" style={{ marginTop: '30px', marginBottom: '20px' }}>Borrowed Books</Typography>
           </div>
           {borrowedBook?.length > 0 ? (
             <>

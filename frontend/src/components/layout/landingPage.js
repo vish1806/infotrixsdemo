@@ -44,16 +44,24 @@ const LandingPage = () => {
       <Typography variant="body1" sx={{ mb: 4 }}>
         Manage your library seamlessly with our advanced system.
       </Typography>
-      <Button
+      <Typography variant="body5" sx={{ mb: 4 }}>
+        User: guest, guest
+      </Typography>
+      <Typography variant="body2" sx={{ mb: 4 }}>
+        Admin: Admin, Admin
+      </Typography>
+      {/* <Button
+        onClick={() => {
+          setOpenLoginDialog(true);
+        }}
         component={Link}
-        to="/books"
         variant="contained"
         color="primary"
         size="large"
         sx={{ mx: 7 }}
       >
         Sign Up
-      </Button>
+      </Button> */}
       <Button
         onClick={() => {
           setOpenLoginDialog(true);
