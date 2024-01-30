@@ -1,12 +1,23 @@
-.mb2 {
-    margin-bottom: 2em !important;
+.conf_modal {
+    position: fixed; /* Use fixed position to keep it centered regardless of scrolling */
+    top: 50%; /* Position it 50% from the top */
+    left: 50%; /* Position it 50% from the left */
+    transform: translate(-50%, -50%); /* Center the modal both horizontally and vertically */
+    background-color: white; /* Optionally, set background color */
+    padding: 20px; /* Optionally, add padding */
+  }
+  
+.tableHead
+{
+    font-weight: bold;
 }
-
+  
 .pageHeader {
     display: flex;
     justify-content: space-between;
     padding: 2em 0 1em;
     border-bottom: 1px solid #e4e4e4;
+    
 }
 
 .pageHeader h1 {

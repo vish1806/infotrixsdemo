@@ -56,9 +56,11 @@ export const BooksList = () => {
     fetchUserBook().catch((e) => console.log(e));
   }, [user]);
 
+  const bookListMargin = books.length > 0 ? `${books.length * 1}em` : '6em';
   return (
     <>
-      <div className={`${classes.pageHeader} ${classes.mb2}`}>
+      {/* <div className={`${classes.pageHeader} ${classes.mb2}`}> */}
+      <div className={`${classes.pageHeader} ${classes.mb3}`}>
         <Typography variant="h5">Book List</Typography>
         {isAdmin && (
           <Button
@@ -76,17 +78,17 @@ export const BooksList = () => {
           <div className={classes.tableContainer}>
             <TableContainer component={Paper}>
               <Table stickyHeader>
-                <TableHead>
-                  <TableRow>
-                    <TableCell>Name</TableCell>
-                    <TableCell align="right">ISBN</TableCell>
-                    <TableCell>Category</TableCell>
-                    <TableCell align="right">Quantity</TableCell>
-                    <TableCell align="right">Available</TableCell>
-                    <TableCell align="right">Price</TableCell>
-                    <TableCell>Action</TableCell>
-                  </TableRow>
-                </TableHead>
+              <TableHead>
+                <TableRow>
+                  <TableCell className={classes.tableHead}>Name</TableCell>
+                  <TableCell className={classes.tableHead} align="right">ISBN</TableCell>
+                  <TableCell className={classes.tableHead}>Category</TableCell>
+                  <TableCell className={classes.tableHead} align="right">Quantity</TableCell>
+                  <TableCell className={classes.tableHead} align="right">Available</TableCell>
+                  <TableCell className={classes.tableHead} align="right">Price</TableCell>
+                  <TableCell className={classes.tableHead}>Action</TableCell>
+                </TableRow>
+              </TableHead>
                 <TableBody>
                   {(rowsPerPage > 0
                     ? books.slice(
@@ -188,8 +190,8 @@ export const BooksList = () => {
 
       {user && !isAdmin && (
         <>
-          <div className={`${classes.pageHeader} ${classes.mb2}`}>
-          <Typography variant="h5" style={{ marginTop: '30px', marginBottom: '20px' }}>Borrowed Books</Typography>
+          <div className={classes.pageHeader} style={{ marginTop: bookListMargin, marginBottom: '2em' }}>
+            <Typography variant="h5" style={{ marginTop: '60px', marginBottom: '20px' }} >Borrowed Books</Typography>
           </div>
           {borrowedBook?.length > 0 ? (
             <>

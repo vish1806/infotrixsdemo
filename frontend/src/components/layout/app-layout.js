@@ -87,7 +87,7 @@ export const AppLayout = () => {
           <Toolbar disableGutters sx={{ display: "flex", justifyContent: "space-between" }}>
             <div style={{ display: "flex", alignItems: "center" }}>
               <img src={image} width="80" height="80" alt="" />
-              <Link to="/" style={{ textDecoration: "none", flexGrow: 1 }}>
+              <Link to="/books" style={{ textDecoration: "none", flexGrow: 1 }}>
                 <Typography
                   variant="h6"
                   noWrap
