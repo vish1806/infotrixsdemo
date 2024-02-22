@@ -67,7 +67,6 @@ export const Book = () => {
         .then((res) => setBook(res))
         .catch((e) => console.log(e));
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [bookIsbn]);
   console.log(book);
   return book ? (

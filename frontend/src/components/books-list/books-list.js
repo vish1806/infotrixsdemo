@@ -37,7 +37,6 @@ export const BooksList = () => {
 
   const fetchUserBook = async () => {
     const { books } = await BackendApi.user.getBorrowBook();
-
     setBorrowedBook(books);
   };
 
@@ -188,7 +187,7 @@ export const BooksList = () => {
         <Typography variant="h5">No books found!</Typography>
       )}
 
-      {user && !isAdmin && (
+      {user && !isAdmin &&    (
         <>
           <div className={classes.pageHeader} style={{ marginTop: bookListMargin, marginBottom: '2em' }}>
             <Typography variant="h5" style={{ marginTop: '60px', marginBottom: '20px' }} >Borrowed Books</Typography>
