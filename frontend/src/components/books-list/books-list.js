@@ -187,11 +187,14 @@ export const BooksList = () => {
         <Typography variant="h5">No books found!</Typography>
       )}
 
-      {user && !isAdmin &&    (
+      {user && !isAdmin && (
         <>
           <div className={classes.pageHeader} style={{ marginTop: bookListMargin, marginBottom: '2em' }}>
             <Typography variant="h5" style={{ marginTop: '60px', marginBottom: '20px' }} >Borrowed Books</Typography>
           </div>
+          {/* <div className={`${classes.pageHeader} ${classes.mb2}`} style={{ marginTop: bookListMargin, marginBottom: '2em' }}>
+              <Typography variant="h5" style={{ marginTop: '60px', marginBottom: '20px' }}>Borrowed Books</Typography>
+          </div> */}
           {borrowedBook?.length > 0 ? (
             <>
               <div className={classes.tableContainer}>
@@ -235,7 +238,7 @@ export const BooksList = () => {
               </div>
             </>
           ) : (
-            <Typography variant="h5">No books issued!</Typography>
+            <Typography variant="h5">No books issue!</Typography>
           )}
         </>
       )}
